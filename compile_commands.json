@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/root/mycode/testmuduo",
+  "command": "/usr/bin/c++    -g -g -o CMakeFiles/server.dir/testmuduoserver.cpp.o -c /root/mycode/testmuduo/testmuduoserver.cpp",
+  "file": "/root/mycode/testmuduo/testmuduoserver.cpp",
+  "output": "testmuduo/CMakeFiles/server.dir/testmuduoserver.cpp.o"
+},
+{
+  "directory": "/root/mycode/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db  -g -o CMakeFiles/ChatServer.dir/chatserver.cpp.o -c /root/mycode/src/server/chatserver.cpp",
+  "file": "/root/mycode/src/server/chatserver.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o"
+},
+{
+  "directory": "/root/mycode/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db  -g -o CMakeFiles/ChatServer.dir/chatservice.cpp.o -c /root/mycode/src/server/chatservice.cpp",
+  "file": "/root/mycode/src/server/chatservice.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o"
+},
+{
+  "directory": "/root/mycode/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db  -g -o CMakeFiles/ChatServer.dir/main.cpp.o -c /root/mycode/src/server/main.cpp",
+  "file": "/root/mycode/src/server/main.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
+},
+{
+  "directory": "/root/mycode/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db  -g -o CMakeFiles/ChatServer.dir/db/db.cpp.o -c /root/mycode/src/server/db/db.cpp",
+  "file": "/root/mycode/src/server/db/db.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o"
+}
+]

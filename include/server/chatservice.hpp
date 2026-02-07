@@ -58,6 +58,9 @@ public:
     
     // 回传客户端ACK
     void ACKToClient(const TcpConnectionPtr &conn, int &msgId);
+
+    // redis心跳续期
+    void OnHeartBeat(int id);
 private:
     ChatService();
     // 消息id-》业务处理方法

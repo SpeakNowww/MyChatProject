@@ -1,11 +1,17 @@
 #include "redis.hpp"
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-Redis::Redis() : _publish_context(nullptr), _subscribe_context(nullptr) {}
+
+Redis::Redis() : _publish_context(nullptr), _subscribe_context(nullptr) 
+{
+    
+}
 
 Redis::~Redis() 
 {
+    _subscribe_context = nullptr;
     if(_publish_context != nullptr)
     {
         redisFree(_publish_context);
@@ -33,6 +39,7 @@ bool Redis::connect()
         cerr << "failed to connect to redis" << endl;
         return false;
     }
+    g_redis_ctx = redisConnect("127.0.0.1", 6379);
 
     // 单独线程中监听通道消息，因为订阅会阻塞线程，防止阻塞主线程
     thread t([&]()
@@ -133,4 +140,41 @@ void Redis::observer_channel_message()
 void Redis::init_notify_handler(function<void(int, string)> fn)
 {
     this->_notify_message_handler = fn;
+}
+
+
+// 读消息，不存在则返回空，转sql
+std::optional<std::string> Redis::Get(const std::string &key)
+{
+    redisReply *reply = (redisReply*)redisCommand(g_redis_ctx, "GET %s", key.c_str());
+    if (reply == nullptr || reply->type != REDIS_REPLY_STRING)
+    {
+        std::cout << "key not found in redis" << std::endl;
+        freeReplyObject(reply);
+        return std::nullopt;
+    }
+
+    std::string val = reply->str;
+    std::cout << "successfully get" << val << "from redis" << std::endl;
+    freeReplyObject(reply);
+    return val;
+}
+
+// 写消息，传入过期时间
+bool Redis::Set(const std::string &key, const std::string &value, int expire_sec)
+{
+    redisReply *reply = (redisReply*)redisCommand(g_redis_ctx, "SET %s %s EX %d", 
+                                            key.c_str(), value.c_str(), expire_sec);
+    bool ok = reply && reply->type == REDIS_REPLY_STATUS && !strcmp(reply->str, "OK");
+    freeReplyObject(reply);
+    return ok;
+}
+
+// 删除消息
+bool Redis::Delete(const std::string &key)
+{
+    redisReply *reply = (redisReply*)redisCommand(g_redis_ctx, "DEL %s", key.c_str());
+    bool ok = reply && reply->type == REDIS_REPLY_INTEGER && reply->integer > 0;
+    freeReplyObject(reply);
+    return ok;
 }

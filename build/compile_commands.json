@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/root/mycode/build/testmuduo",
+  "command": "/usr/bin/c++    -g -g -o CMakeFiles/server.dir/testmuduoserver.cpp.o -c /root/mycode/testmuduo/testmuduoserver.cpp",
+  "file": "/root/mycode/testmuduo/testmuduoserver.cpp",
+  "output": "testmuduo/CMakeFiles/server.dir/testmuduoserver.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/chatserver.cpp.o -c /root/mycode/src/server/chatserver.cpp",
+  "file": "/root/mycode/src/server/chatserver.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/chatservice.cpp.o -c /root/mycode/src/server/chatservice.cpp",
+  "file": "/root/mycode/src/server/chatservice.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/encrypt.cpp.o -c /root/mycode/src/server/encrypt.cpp",
+  "file": "/root/mycode/src/server/encrypt.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/encrypt.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/main.cpp.o -c /root/mycode/src/server/main.cpp",
+  "file": "/root/mycode/src/server/main.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/main.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/db/db.cpp.o -c /root/mycode/src/server/db/db.cpp",
+  "file": "/root/mycode/src/server/db/db.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/db/db.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/model/chathistory.cpp.o -c /root/mycode/src/server/model/chathistory.cpp",
+  "file": "/root/mycode/src/server/model/chathistory.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/model/chathistory.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o -c /root/mycode/src/server/model/friendmodel.cpp",
+  "file": "/root/mycode/src/server/model/friendmodel.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/model/friendmodel.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o -c /root/mycode/src/server/model/groupmodel.cpp",
+  "file": "/root/mycode/src/server/model/groupmodel.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/model/offlinemessagemodel.cpp.o -c /root/mycode/src/server/model/offlinemessagemodel.cpp",
+  "file": "/root/mycode/src/server/model/offlinemessagemodel.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/model/offlinemessagemodel.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/model/usermodel.cpp.o -c /root/mycode/src/server/model/usermodel.cpp",
+  "file": "/root/mycode/src/server/model/usermodel.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/redis/redis.cpp.o -c /root/mycode/src/server/redis/redis.cpp",
+  "file": "/root/mycode/src/server/redis/redis.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/client",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatClient.dir/main.cpp.o -c /root/mycode/src/client/main.cpp",
+  "file": "/root/mycode/src/client/main.cpp",
+  "output": "src/client/CMakeFiles/ChatClient.dir/main.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/client",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatClient.dir/__/server/encrypt.cpp.o -c /root/mycode/src/server/encrypt.cpp",
+  "file": "/root/mycode/src/server/encrypt.cpp",
+  "output": "src/client/CMakeFiles/ChatClient.dir/__/server/encrypt.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/client",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatClient.dir/__/server/model/chathistory.cpp.o -c /root/mycode/src/server/model/chathistory.cpp",
+  "file": "/root/mycode/src/server/model/chathistory.cpp",
+  "output": "src/client/CMakeFiles/ChatClient.dir/__/server/model/chathistory.cpp.o"
+}
+]

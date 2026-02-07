@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/thirdparty"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceFolder}/include",
+                    "${workspaceFolder}/thirdparty"
+                ],
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            },
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

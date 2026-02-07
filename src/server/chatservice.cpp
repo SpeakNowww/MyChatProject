@@ -93,6 +93,8 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
 
             // 向redis订阅channel=id
             _redis.subscribe(id);
+            // 设置redis在线状态
+            _redis.Set(std::to_string(id), std::to_string(0), 120);
 
             user.setState("Online");
             _userModel.updateState(user);
@@ -251,6 +253,8 @@ void ChatService::logout(const TcpConnectionPtr &conn, json &js, Timestamp time)
 
     // redis中取消订阅id
     _redis.unsubscribe(userid);
+    // redis中下线用户
+    _redis.Delete(std::to_string(userid));
 
     User user(userid, "", "", "Offline");
     _userModel.updateState(user);
@@ -277,6 +281,14 @@ void ChatService::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time
     }
 
     // 查询toid是否在线
+    auto isOnlineOnRedis = _redis.Get(std::to_string(toid));
+    if (isOnlineOnRedis)
+    {
+        std::cout << "successfully get from redis" << std::endl;
+        _redis.publish(toid, jsonStr);
+        return;
+    }
+
     User user = _userModel.query(toid);
     if (user.getState() == "Online")
     {
@@ -411,12 +423,15 @@ void ChatService::handleRedisSubscribeMessage(int userid, string msg)
     auto it = _userConnMap.find(userid);
     if (it != _userConnMap.end())
     {
+        OnHeartBeat(userid);
         json js = json::parse(msg);
-        int msgId = js["msgId"].get<int>();
+        int msgId = js["msgId"];
+        EnMsgType msgid = js["msgid"];
         string jsonStr = js.dump();
-        string encryptedMessage = encryptedMessage_Svr(jsonStr, GROUP_CHAT_MSG, msgId);
+        string encryptedMessage = encryptedMessage_Svr(jsonStr, msgid, msgId);
 
         it->second->send(encryptedMessage);
+        // ACKToClient(conn, msgId);
         return;
     }
 
@@ -516,4 +531,10 @@ void ChatService::ACKToClient(const TcpConnectionPtr &conn, int &msgId)
     string jsonStr = response.dump();
     string encryptedMessage = encryptedMessage_Svr(jsonStr, GROUP_CHAT_MSG, msgId);
     conn->send(encryptedMessage);
+}
+
+// redis心跳续期
+void ChatService::OnHeartBeat(int id)
+{
+    _redis.Set(std::to_string(id), std::to_string(0), 120);
 }
