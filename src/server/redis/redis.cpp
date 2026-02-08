@@ -39,7 +39,7 @@ bool Redis::connect()
         cerr << "failed to connect to redis" << endl;
         return false;
     }
-    g_redis_ctx = redisConnect("127.0.0.1", 6379);
+    // g_redis_ctx = redisConnect("127.0.0.1", 6379);
 
     // 单独线程中监听通道消息，因为订阅会阻塞线程，防止阻塞主线程
     thread t([&]()
@@ -146,7 +146,7 @@ void Redis::init_notify_handler(function<void(int, string)> fn)
 // 读消息，不存在则返回空，转sql
 std::optional<std::string> Redis::Get(const std::string &key)
 {
-    redisReply *reply = (redisReply*)redisCommand(g_redis_ctx, "GET %s", key.c_str());
+    redisReply *reply = (redisReply*)redisCommand(_publish_context, "GET %s", key.c_str());
     if (reply == nullptr || reply->type != REDIS_REPLY_STRING)
     {
         std::cout << "key not found in redis" << std::endl;
@@ -163,7 +163,7 @@ std::optional<std::string> Redis::Get(const std::string &key)
 // 写消息，传入过期时间
 bool Redis::Set(const std::string &key, const std::string &value, int expire_sec)
 {
-    redisReply *reply = (redisReply*)redisCommand(g_redis_ctx, "SET %s %s EX %d", 
+    redisReply *reply = (redisReply*)redisCommand(_publish_context, "SET %s %s EX %d", 
                                             key.c_str(), value.c_str(), expire_sec);
     bool ok = reply && reply->type == REDIS_REPLY_STATUS && !strcmp(reply->str, "OK");
     freeReplyObject(reply);
@@ -173,7 +173,7 @@ bool Redis::Set(const std::string &key, const std::string &value, int expire_sec
 // 删除消息
 bool Redis::Delete(const std::string &key)
 {
-    redisReply *reply = (redisReply*)redisCommand(g_redis_ctx, "DEL %s", key.c_str());
+    redisReply *reply = (redisReply*)redisCommand(_publish_context, "DEL %s", key.c_str());
     bool ok = reply && reply->type == REDIS_REPLY_INTEGER && reply->integer > 0;
     freeReplyObject(reply);
     return ok;
