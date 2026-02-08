@@ -228,6 +228,7 @@ void ChatService::clientCloseException(const TcpConnectionPtr &conn)
     }
     
     _redis.unsubscribe(user.getId());
+    _redis.Delete(std::to_string(user.getId()));
 
     // 更新用户状态信息
     if(user.getId() != -1)

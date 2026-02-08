@@ -11,15 +11,16 @@ Redis::Redis() : _publish_context(nullptr), _subscribe_context(nullptr)
 
 Redis::~Redis() 
 {
-    _subscribe_context = nullptr;
     if(_publish_context != nullptr)
     {
         redisFree(_publish_context);
+        _publish_context = nullptr;
     }
 
     if(_subscribe_context != nullptr)
     {
         redisFree(_subscribe_context);
+        _subscribe_context = nullptr;
     } 
 }
 
@@ -42,7 +43,7 @@ bool Redis::connect()
     // g_redis_ctx = redisConnect("127.0.0.1", 6379);
 
     // 单独线程中监听通道消息，因为订阅会阻塞线程，防止阻塞主线程
-    thread t([&]()
+    thread t([this]()
     {
         observer_channel_message();
     }   
