@@ -413,5 +413,9 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: \
  /usr/include/openssl/asn1.h /usr/include/openssl/asn1err.h \
  /usr/include/openssl/objectserr.h /usr/include/openssl/rand.h \
  /usr/include/openssl/randerr.h /usr/include/c++/13/iostream \
+ /root/mycode/include/server/redis/dbtask.hpp /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/condition_variable \
  /usr/local/include/muduo/base/Logging.h \
  /usr/local/include/muduo/base/LogStream.h /usr/include/openssl/aes.h

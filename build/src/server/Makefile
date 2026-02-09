@@ -370,6 +370,30 @@ model/usermodel.cpp.s:
 	cd /root/mycode/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.s
 .PHONY : model/usermodel.cpp.s
 
+redis/dbtask.o: redis/dbtask.cpp.o
+.PHONY : redis/dbtask.o
+
+# target to build an object file
+redis/dbtask.cpp.o:
+	cd /root/mycode/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/redis/dbtask.cpp.o
+.PHONY : redis/dbtask.cpp.o
+
+redis/dbtask.i: redis/dbtask.cpp.i
+.PHONY : redis/dbtask.i
+
+# target to preprocess a source file
+redis/dbtask.cpp.i:
+	cd /root/mycode/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/redis/dbtask.cpp.i
+.PHONY : redis/dbtask.cpp.i
+
+redis/dbtask.s: redis/dbtask.cpp.s
+.PHONY : redis/dbtask.s
+
+# target to generate assembly for a file
+redis/dbtask.cpp.s:
+	cd /root/mycode/build && $(MAKE) $(MAKESILENT) -f src/server/CMakeFiles/ChatServer.dir/build.make src/server/CMakeFiles/ChatServer.dir/redis/dbtask.cpp.s
+.PHONY : redis/dbtask.cpp.s
+
 redis/redis.o: redis/redis.cpp.o
 .PHONY : redis/redis.o
 
@@ -433,6 +457,9 @@ help:
 	@echo "... model/usermodel.o"
 	@echo "... model/usermodel.i"
 	@echo "... model/usermodel.s"
+	@echo "... redis/dbtask.o"
+	@echo "... redis/dbtask.i"
+	@echo "... redis/dbtask.s"
 	@echo "... redis/redis.o"
 	@echo "... redis/redis.i"
 	@echo "... redis/redis.s"

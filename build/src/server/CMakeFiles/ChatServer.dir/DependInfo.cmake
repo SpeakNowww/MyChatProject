@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/mycode/src/server/model/groupmodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/groupmodel.cpp.o.d"
   "/root/mycode/src/server/model/offlinemessagemodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/offlinemessagemodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/offlinemessagemodel.cpp.o.d"
   "/root/mycode/src/server/model/usermodel.cpp" "src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/model/usermodel.cpp.o.d"
+  "/root/mycode/src/server/redis/dbtask.cpp" "src/server/CMakeFiles/ChatServer.dir/redis/dbtask.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/redis/dbtask.cpp.o.d"
   "/root/mycode/src/server/redis/redis.cpp" "src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o" "gcc" "src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o.d"
   )
 

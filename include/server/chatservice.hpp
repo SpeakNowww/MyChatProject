@@ -12,6 +12,7 @@
 #include "friendmodel.hpp"
 #include "public.hpp"
 #include "encrypt.hpp"
+#include "dbtask.hpp"
 using namespace muduo;
 using namespace muduo::net;
 using namespace std;

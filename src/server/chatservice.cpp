@@ -35,6 +35,7 @@ ChatService::ChatService()
     if (_redis.connect())
     {
         _redis.init_notify_handler(std::bind(&ChatService::handleRedisSubscribeMessage, this, _1, _2));
+        start_db_thread();
     }
 }
 
@@ -97,7 +98,12 @@ void ChatService::login(const TcpConnectionPtr &conn, json &js, Timestamp time)
             _redis.Set(std::to_string(id), std::to_string(0), 120);
 
             user.setState("Online");
-            _userModel.updateState(user);
+            DbTaskArgs t;
+            t.type = DB_TASK_UPDATE_USER_STATE;
+            t.userid = user.getId();
+            t.state = "Online";
+            DbTaskQueue::GetInstance().push(std::move(t));
+            // _userModel.updateState(user);
             json response;
             response["msgid"] = LOGIN_MSG_ACK;
             response["errno"] = 0;
@@ -233,8 +239,11 @@ void ChatService::clientCloseException(const TcpConnectionPtr &conn)
     // 更新用户状态信息
     if(user.getId() != -1)
     {
-        user.setState("Offline");
-        _userModel.updateState(user);
+        DbTaskArgs t;
+        t.type = DB_TASK_UPDATE_USER_STATE;
+        t.userid = user.getId();
+        t.state = "Offline";
+        DbTaskQueue::GetInstance().push(std::move(t));
     }
 }
 
@@ -257,8 +266,13 @@ void ChatService::logout(const TcpConnectionPtr &conn, json &js, Timestamp time)
     // redis中下线用户
     _redis.Delete(std::to_string(userid));
 
-    User user(userid, "", "", "Offline");
-    _userModel.updateState(user);
+    // User user(userid, "", "", "Offline");
+    DbTaskArgs t;
+    t.type = DB_TASK_UPDATE_USER_STATE;
+    t.userid = userid;
+    t.state = "Offline";
+    DbTaskQueue::GetInstance().push(std::move(t));
+    // _userModel.updateState(user);
     ACKToClient(conn, msgId);
 }
 
@@ -298,7 +312,12 @@ void ChatService::oneChat(const TcpConnectionPtr &conn, json &js, Timestamp time
     }
 
     // toid离线
-    _offlineMsgModel.insert(toid, jsonStr);
+    // _offlineMsgModel.insert(toid, jsonStr);
+    DbTaskArgs t;
+    t.type = DB_TASK_INSERT_OFFLINE_MSG;
+    t.toid = user.getId();
+    t.msg = jsonStr;
+    DbTaskQueue::GetInstance().push(std::move(t));
     ACKToClient(conn, msgId);
 }
 
@@ -310,7 +329,11 @@ void ChatService::addFriend(const TcpConnectionPtr &conn, json &js, Timestamp ti
     int msgId = js["msgId"].get<int>();
     
 
-    _friendModel.insert(userid, friendid);
+    DbTaskArgs t;
+    t.type = DB_TASK_ADD_FRIEND;
+    t.userid = userid;
+    t.friendid = friendid;
+    DbTaskQueue::GetInstance().push(std::move(t));
     ACKToClient(conn, msgId);
     // json response;
     // response["msgid"] = REG_MSG_ACK;
@@ -328,7 +351,12 @@ void ChatService::createGroup(const TcpConnectionPtr &conn, json &js, Timestamp 
     int msgId = js["msgId"].get<int>();
 
     Group group(-1, name, desc);
-    if(_groupModel.createGroup(group))
+    DbTaskArgs t;
+    t.type = DB_TASK_CREATE_GROUP;
+    t.name = name;
+    t.desc = desc;
+    DbTaskQueue::GetInstance().push(std::move(t));
+    if(1)
     {
         _groupModel.addGroup(userid, group.getId(), "creator");
         json response;
@@ -360,7 +388,12 @@ void ChatService::addGroup(const TcpConnectionPtr &conn, json &js, Timestamp tim
     int groupid = js["groupid"].get<int>();
     int msgId = js["msgId"].get<int>();
 
-    if(_groupModel.addGroup(userid, groupid, "normal"))
+    DbTaskArgs t;
+    t.type = DB_TASK_ADD_GROUP_USER;
+    t.userid = userid;
+    t.groupid = groupid;
+    DbTaskQueue::GetInstance().push(std::move(t));
+    if(1)
     {
         json response;
         response["msgid"] = ADD_GROUP_MSG_ACK;
@@ -411,7 +444,15 @@ void ChatService::groupChat(const TcpConnectionPtr &conn, json &js, Timestamp ti
             {
                 _redis.publish(id, jsonStr);
             }
-            else _offlineMsgModel.insert(id, jsonStr);
+            // else _offlineMsgModel.insert(id, jsonStr);
+            else
+            {
+                DbTaskArgs t;
+                t.type = DB_TASK_INSERT_OFFLINE_MSG;
+                t.toid = id;
+                t.msg = jsonStr;
+                DbTaskQueue::GetInstance().push(std::move(t));
+            }
         }
     }
     ACKToClient(conn, msgId);

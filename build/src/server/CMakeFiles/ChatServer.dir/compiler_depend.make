@@ -13,6 +13,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /root/mycode/include/server/model/offlinemessagemodel.hpp \
   /root/mycode/include/server/model/user.hpp \
   /root/mycode/include/server/model/usermodel.hpp \
+  /root/mycode/include/server/redis/dbtask.hpp \
   /root/mycode/include/server/redis/redis.hpp \
   /root/mycode/thirdparty/json.hpp \
   /usr/include/alloca.h \
@@ -104,6 +105,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -165,6 +167,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -174,6 +177,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_queue.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
@@ -205,6 +209,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -216,6 +221,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /usr/include/c++/13/cxxabi.h \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -248,6 +254,7 @@ src/server/CMakeFiles/ChatServer.dir/chatserver.cpp.o: /root/mycode/src/server/c
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/queue \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
@@ -528,6 +535,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /root/mycode/include/server/model/offlinemessagemodel.hpp \
   /root/mycode/include/server/model/user.hpp \
   /root/mycode/include/server/model/usermodel.hpp \
+  /root/mycode/include/server/redis/dbtask.hpp \
   /root/mycode/include/server/redis/redis.hpp \
   /root/mycode/thirdparty/json.hpp \
   /usr/include/alloca.h \
@@ -618,6 +626,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
@@ -679,6 +688,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
@@ -688,6 +698,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_numeric.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_queue.h \
   /usr/include/c++/13/bits/stl_raw_storage_iter.h \
   /usr/include/c++/13/bits/stl_relops.h \
   /usr/include/c++/13/bits/stl_tempbuf.h \
@@ -719,6 +730,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
   /usr/include/c++/13/compare \
+  /usr/include/c++/13/condition_variable \
   /usr/include/c++/13/cstddef \
   /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
@@ -730,6 +742,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /usr/include/c++/13/cxxabi.h \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/aligned_buffer.h \
   /usr/include/c++/13/ext/alloc_traits.h \
@@ -762,6 +775,7 @@ src/server/CMakeFiles/ChatServer.dir/chatservice.cpp.o: /root/mycode/src/server/
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/glue_numeric_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/queue \
   /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
@@ -3258,11 +3272,17 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
-/usr/include/c++/13/string_view:
+/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
-/usr/include/c++/13/map:
+/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/root/mycode/src/server/main.cpp:
+
+/root/mycode/src/server/model/offlinemessagemodel.cpp:
+
+/root/mycode/src/server/encrypt.cpp:
 
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
 
@@ -3336,6 +3356,8 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/nlohmann/detail/json_custom_base_class.hpp:
 
+/usr/include/c++/13/bits/stl_queue.h:
+
 /usr/include/c++/13/bits/stl_uninitialized.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
@@ -3372,11 +3394,9 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/c++/13/bits/char_traits.h:
 
+/usr/include/c++/13/queue:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
-
-/root/mycode/src/server/model/offlinemessagemodel.cpp:
-
-/root/mycode/src/server/encrypt.cpp:
 
 /usr/include/c++/13/bits/slice_array.h:
 
@@ -3395,6 +3415,8 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/linux/posix_types.h:
+
+/usr/include/c++/13/condition_variable:
 
 /usr/include/c++/13/iomanip:
 
@@ -3439,30 +3461,6 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/c++/13/bits/localefwd.h:
 
 /usr/include/c++/13/cxxabi.h:
-
-/usr/include/c++/13/limits:
-
-/usr/include/c++/13/tr1/hypergeometric.tcc:
-
-/usr/include/signal.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/boost/config/detail/posix_features.hpp:
-
-/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
-
-/usr/include/c++/13/bits/forward_list.tcc:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
-/usr/include/c++/13/bits/gslice_array.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
-
-/usr/include/c++/13/bits/vector.tcc:
-
-/usr/include/c++/13/optional:
 
 /usr/include/x86_64-linux-gnu/sys/ucontext.h:
 
@@ -3512,6 +3510,12 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/boost/core/enable_if.hpp:
 
+/usr/include/c++/13/bits/stl_deque.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/local/include/muduo/net/TcpConnection.h:
+
 /usr/include/boost/type_traits/remove_cv.hpp:
 
 /usr/include/c++/13/bits/ios_base.h:
@@ -3534,31 +3538,33 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/boost/config/detail/suffix.hpp:
 
+/usr/include/boost/config/detail/posix_features.hpp:
+
+/usr/include/c++/13/limits:
+
+/usr/include/signal.h:
+
+/usr/include/c++/13/tr1/hypergeometric.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
+
+/usr/include/c++/13/bits/forward_list.tcc:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
+
+/usr/include/c++/13/bits/gslice_array.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
+
+/usr/include/c++/13/bits/vector.tcc:
+
+/usr/include/c++/13/optional:
+
 /usr/include/c++/13/bits/istream.tcc:
 
 /usr/include/boost/config/detail/cxx_composite.hpp:
-
-/usr/include/c++/13/bits/stl_iterator.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/local/include/muduo/net/InetAddress.h:
-
-/usr/include/boost/config/workaround.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
-
-/usr/include/mysql/mysql.h:
-
-/usr/include/boost/type_traits/alignment_of.hpp:
-
-/usr/include/c++/13/bits/allocator.h:
-
-/usr/include/c++/13/unordered_map:
-
-/root/mycode/include/server/model/offlinemessagemodel.hpp:
-
-/usr/include/nlohmann/detail/iterators/primitive_iterator.hpp:
 
 /usr/include/boost/core/demangle.hpp:
 
@@ -3582,11 +3588,35 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
+/usr/include/mysql/plugin_auth_common.h:
+
+/usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/local/include/muduo/net/InetAddress.h:
+
+/usr/include/boost/config/workaround.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
+/usr/include/mysql/mysql.h:
+
+/usr/include/boost/type_traits/alignment_of.hpp:
+
+/usr/include/c++/13/bits/allocator.h:
+
+/usr/include/c++/13/unordered_map:
+
+/root/mycode/include/server/model/offlinemessagemodel.hpp:
+
+/usr/include/nlohmann/detail/iterators/primitive_iterator.hpp:
+
 /usr/include/c++/13/bits/memoryfwd.h:
 
 /usr/include/c++/13/bits/fs_fwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
 /usr/include/boost/type_traits/remove_bounds.hpp:
 
@@ -3610,6 +3640,8 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/c++/13/stdexcept:
 
+/root/mycode/include/server/redis/dbtask.hpp:
+
 /usr/include/boost/core/addressof.hpp:
 
 /usr/include/c++/13/mutex:
@@ -3629,8 +3661,6 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/c++/13/array:
 
 /usr/include/c++/13/bits/hash_bytes.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /root/mycode/include/server/model/groupmodel.hpp:
 
@@ -3676,6 +3706,8 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/boost/type_traits/is_const.hpp:
 
+/usr/include/c++/13/bits/deque.tcc:
+
 /usr/include/c++/13/bits/mask_array.h:
 
 /usr/include/c++/13/bits/stl_multimap.h:
@@ -3687,6 +3719,8 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/openssl/symhacks.h:
 
 /usr/include/c++/13/bits/alloc_traits.h:
+
+/usr/include/c++/13/deque:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
@@ -3826,6 +3860,14 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/boost/config/platform/linux.hpp:
 
+/usr/include/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/mysql/client_plugin.h:
+
+/usr/include/nlohmann/detail/exceptions.hpp:
+
 /usr/include/c++/13/ext/type_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
@@ -3837,6 +3879,10 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/c++/13/bits/fs_dir.h:
+
+/usr/include/c++/13/bits/locale_classes.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
 
@@ -3866,15 +3912,19 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/openssl/params.h:
 
+/usr/include/c++/13/map:
+
+/usr/include/c++/13/string_view:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
 /usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/boost/detail/workaround.hpp:
 
 /usr/include/c++/13/bits/gslice.h:
 
-/usr/include/c++/13/bits/locale_classes.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/c++/13/tr1/ell_integral.tcc:
 
@@ -3905,8 +3955,6 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/mysql/mysql_version.h:
 
 /usr/include/c++/13/tr1/special_function_util.h:
-
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
 /usr/include/c++/13/typeinfo:
 
@@ -4051,14 +4099,6 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/c++/13/bits/unique_lock.h:
 
 /usr/include/openssl/objectserr.h:
-
-/usr/include/wchar.h:
-
-/usr/include/mysql/client_plugin.h:
-
-/usr/include/nlohmann/detail/exceptions.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/openssl/randerr.h:
 
@@ -4232,9 +4272,9 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h:
 
-/usr/include/c++/13/bits/predefined_ops.h:
-
 /usr/include/openssl/opensslv.h:
+
+/usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h:
 
@@ -4310,10 +4350,6 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 
 /usr/local/include/muduo/net/Buffer.h:
 
-/usr/include/c++/13/ext/numeric_traits.h:
-
-/usr/include/mysql/plugin_auth_common.h:
-
 /usr/local/include/hiredis/alloc.h:
 
 /usr/include/c++/13/bits/stl_bvector.h:
@@ -4341,11 +4377,3 @@ src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o: /root/mycode/src/server/
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
 /usr/include/mysql/udf_registration_types.h:
-
-/root/mycode/src/server/main.cpp:
-
-/usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
-
-/usr/local/include/muduo/net/TcpConnection.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:

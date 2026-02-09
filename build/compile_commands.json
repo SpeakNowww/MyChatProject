@@ -67,6 +67,12 @@
 },
 {
   "directory": "/root/mycode/build/src/server",
+  "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/redis/dbtask.cpp.o -c /root/mycode/src/server/redis/dbtask.cpp",
+  "file": "/root/mycode/src/server/redis/dbtask.cpp",
+  "output": "src/server/CMakeFiles/ChatServer.dir/redis/dbtask.cpp.o"
+},
+{
+  "directory": "/root/mycode/build/src/server",
   "command": "/usr/bin/c++  -I/root/mycode/include -I/root/mycode/include/server -I/root/mycode/thirdparty -I/root/mycode/include/server/db -I/root/mycode/include/server/model -I/root/mycode/include/server/redis -I/usr/include/openssl  -g -o CMakeFiles/ChatServer.dir/redis/redis.cpp.o -c /root/mycode/src/server/redis/redis.cpp",
   "file": "/root/mycode/src/server/redis/redis.cpp",
   "output": "src/server/CMakeFiles/ChatServer.dir/redis/redis.cpp.o"
